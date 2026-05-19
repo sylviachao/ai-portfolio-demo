@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-neutral-400;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply border-b border-neutral-200 px-4 py-14 sm:px-6 sm:py-16;
+  }
+
+  .section-inner {
+    @apply mx-auto max-w-3xl;
+  }
+
+  .section-inner-wide {
+    @apply mx-auto max-w-5xl;
+  }
+
+  .card-label {
+    @apply text-[0.6875rem] font-semibold uppercase tracking-wider text-neutral-500;
+  }
+
+  .prose-muted {
+    @apply text-sm leading-relaxed text-neutral-500;
+  }
+}
